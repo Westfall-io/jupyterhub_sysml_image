@@ -42,7 +42,7 @@ RUN apt-get install -y npm wget curl unzip
 RUN wget https://github.com/Systems-Modeling/SysML-v2-Pilot-Implementation/releases/download/2024-07/jupyter-sysml-kernel-0.43.2.zip
 RUN unzip jupyter-sysml-kernel-0.43.2.zip -d /tmp \
   && python3 /tmp/install.py
-RUN apt-get update && apt-get install openjdk-21
+RUN apt-get update && apt-get install -y openjdk-21-jdk openjdk-21-jre
 #RUN apt-get update && apt-get install -y default-jre default-jdk graphviz
 RUN pip install graphviz
 RUN apt-get install -y libvips-dev --no-install-recommends
