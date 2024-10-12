@@ -48,4 +48,4 @@ RUN apt-get install -y libvips-dev --no-install-recommends
 RUN pip install pyvips
 
 USER jovyan
-#RUN pip install jupyterlab-git==0.42.0 jupyterlab_sos==0.9.0
+RUN pip install jupyterlab-git==0.50.1 jupyterlab_sos==0.10.4
