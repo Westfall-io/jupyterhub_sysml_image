@@ -47,6 +47,6 @@ RUN apt-get update && apt-get install -y openjdk-17-jdk openjdk-17-jre graphviz
 RUN pip install graphviz
 RUN apt-get install -y libvips-dev --no-install-recommends
 RUN pip install pyvips
-
-USER jovyan
 RUN pip install jupyterlab-git==0.50.1 jupyterlab_sos==0.10.4
+
+USER joyvan
