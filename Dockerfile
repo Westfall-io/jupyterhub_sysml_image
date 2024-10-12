@@ -16,7 +16,7 @@ RUN apt-get install -y npm wget curl unzip
 #RUN mkdir -p /usr/local/lib/nodejs
 #RUN tar -xJvf node-v18.17.1-linux-arm64.tar.xz -C /usr/local/lib/nodejs
 #RUN . ~/.profile
-RUN apt-get uninstall -y nodejs
+RUN apt-get remove -y nodejs
 RUN apt-get install -y nodejs
 
 # Install extensions
