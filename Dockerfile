@@ -15,7 +15,7 @@ RUN apt-get install -y npm wget curl unzip
 #RUN wget https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-arm64.tar.xz
 RUN wget https://nodejs.org/dist/v22.9.0/node-v22.9.0-linux-x64.tar.gz
 RUN mkdir -p /usr/local/lib/nodejs
-RUN tar -xJvf node-v22.9.0-linux-x64.tar.gz -C /usr/local/lib/nodejs
+RUN tar -xvf node-v22.9.0-linux-x64.tar.gz -C /usr/local/lib/nodejs
 RUN . ~/.profile
 
 # Install extensions
