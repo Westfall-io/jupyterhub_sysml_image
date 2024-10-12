@@ -49,3 +49,6 @@ RUN pip install pyvips
 
 USER jovyan
 RUN pip install jupyterlab-git==0.50.1 jupyterlab_sos==0.10.4
+RUN jupyter labextension install @jupyterlab/git && \
+    jupyter server extension enable --py jupyterlab_git --sys-prefix && \
+    jupyter lab build
