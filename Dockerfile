@@ -18,10 +18,10 @@ RUN apt-get install -y npm wget curl unzip
 #RUN . ~/.profile
 
 # Install extensions
-RUN pip install jupyter_contrib_nbextensions
-RUN jupyter contrib nbextension install --sys-prefix
-RUN jupyter nbextension enable scratchpad/main --sys-prefix
-RUN jupyter labextension install jupyterlab-sos@0.10.4
+#RUN pip install jupyter_contrib_nbextensions
+#RUN jupyter contrib nbextension install --sys-prefix
+#RUN jupyter nbextension enable scratchpad/main --sys-prefix
+#RUN jupyter labextension install jupyterlab-sos@0.10.4
 
 # Run in one command to set npm to v18, otherwise git will fail to install with
 # less than v16.
@@ -31,12 +31,12 @@ RUN jupyter labextension install jupyterlab-sos@0.10.4
 #  && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
 #  && nvm install 18.17.1 \
 #  && nvm alias default 18.17.1 && jupyter labextension install --debug @jupyterlab/git@0.42.0
-RUN jupyter labextension install --debug @systems-modeling/jupyterlab-sysml
-RUN pip install jupyterlab-git==0.50.1 jupyterlab_sos==0.10.4
-RUN pip install sos sos-notebook sos-papermill sos-r
-RUN python -m sos_notebook.install
-RUN pip install sos-bash sos-javascript sos-julia sos-matlab sos-python
-RUN pip install octave_kernel
+#RUN jupyter labextension install --debug @systems-modeling/jupyterlab-sysml
+#RUN pip install jupyterlab-git==0.50.1 jupyterlab_sos==0.10.4
+#RUN pip install sos sos-notebook sos-papermill sos-r
+#RUN python -m sos_notebook.install
+#RUN pip install sos-bash sos-javascript sos-julia sos-matlab sos-python
+#RUN pip install octave_kernel
 
 #SYSMLv2
 RUN wget https://github.com/Systems-Modeling/SysML-v2-Pilot-Implementation/releases/download/2023-07/jupyter-sysml-kernel-0.34.0.zip
