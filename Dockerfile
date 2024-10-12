@@ -16,6 +16,7 @@ RUN apt-get install -y npm wget curl unzip
 #RUN mkdir -p /usr/local/lib/nodejs
 #RUN tar -xJvf node-v18.17.1-linux-arm64.tar.xz -C /usr/local/lib/nodejs
 #RUN . ~/.profile
+RUN apt-get install -y nodejs
 
 # Install extensions
 #RUN pip install jupyter_contrib_nbextensions
@@ -49,6 +50,3 @@ RUN pip install pyvips
 
 USER jovyan
 RUN pip install jupyterlab-git==0.50.1 jupyterlab_sos==0.10.4
-RUN jupyter labextension install @jupyterlab/git && \
-    jupyter server extension enable --py jupyterlab_git --sys-prefix && \
-    jupyter lab build
