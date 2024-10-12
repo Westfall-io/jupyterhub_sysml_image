@@ -48,5 +48,9 @@ RUN pip install graphviz
 RUN apt-get install -y libvips-dev --no-install-recommends
 RUN pip install pyvips
 RUN pip install jupyterlab-git==0.50.1 jupyterlab_sos==0.10.4
+RUN pip install sos sos-notebook sos-papermill sos-r
+RUN python -m sos_notebook.install
+RUN pip install sos-bash sos-javascript sos-julia sos-matlab sos-python
+RUN pip install octave_kernel
 
 USER joyvan
